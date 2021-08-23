@@ -1,0 +1,22 @@
+{
+  "name": "rollup-plugin-simple-copy",
+  "version": "0.0.1",
+  "description": "## How to use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykrods/rollup-plugin-simple-copy.git"
+  },
+  "keywords": [
+    "rollup"
+  ],
+  "author": "ykrods",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ykrods/rollup-plugin-simple-copy/issues"
+  },
+  "homepage": "https://github.com/ykrods/rollup-plugin-simple-copy#readme"
+}
