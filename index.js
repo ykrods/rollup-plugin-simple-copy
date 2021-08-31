@@ -16,14 +16,17 @@ async function* walk(dir) {
     }
 }
 
-function copy(options = { targets: [] }) {
-  const { targets } = options;
+function copy(options = { targets: [], filter: null }) {
+  const { targets, filter } = options;
 
   return {
     name: 'copy',
     async generateBundle() {
       for (let target of targets) {
         for await (const src of await walk(target.src)) {
+          if (filter && !filter(src)) {
+            continue;
+          }
           const dest = path.join(target.dest, path.relative(target.src, src));
           await fs.promises.mkdir(path.dirname(dest), { recursive: true });
           await fs.promises.copyFile(src, dest);
