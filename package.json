@@ -1,10 +1,12 @@
 {
   "name": "rollup-plugin-simple-copy",
-  "version": "0.0.1",
-  "description": "## How to use",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "simple copy plugin for rollup",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "tsc -p jsconfig.json",
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/ykrods/rollup-plugin-simple-copy/issues"
   },
-  "homepage": "https://github.com/ykrods/rollup-plugin-simple-copy#readme"
+  "homepage": "https://github.com/ykrods/rollup-plugin-simple-copy#readme",
+  "devDependencies": {
+    "@types/node": "20.12.12",
+    "rollup": "4.17.2",
+    "typescript": "5.4.5"
+  }
 }
