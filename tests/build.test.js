@@ -2,7 +2,7 @@ import assert from "node:assert";
 import test from "node:test";
 import path from "node:path";
 
-import { collect } from "../src/index.js";
+import { collect } from "../src/build.js";
 
 const __dirname = new URL('.', import.meta.url).pathname;
 const fixtureDir = path.join(__dirname, 'fixtures');

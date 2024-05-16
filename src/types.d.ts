@@ -15,5 +15,10 @@ export interface TargetEntry {
 
 export interface RollupPluginSimpleCopyOptions {
     targets: CopyTarget[]
-    rootDir: string
+    rootDir?: string
+}
+
+export interface VitePluginSimpleCopyOptions {
+    targets: CopyTarget[]
+    extMap: Record<string, string>
 }

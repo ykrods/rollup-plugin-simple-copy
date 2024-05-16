@@ -1,9 +1,13 @@
 {
   "name": "rollup-plugin-simple-copy",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple copy plugin for rollup",
   "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./vite": "./src/vite.js"
+  },
   "scripts": {
     "check": "tsc -p jsconfig.json",
     "test": "node --test"
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@types/node": "20.12.12",
     "rollup": "4.17.2",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "vite": "5.2.11"
   }
 }
