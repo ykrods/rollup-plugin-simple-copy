@@ -11,6 +11,7 @@ import process from "node:process";
  * @typedef { import("rollup").Plugin } Plugin
  *
  * @typedef { import("./types").CopyTarget } CopyTarget
+ * @typedef { import("./types").TargetEntry } TargetEntry
  * @typedef { import("./types").RollupPluginSimpleCopyOptions } RollupPluginSimpleCopyOptions
  */
 
@@ -28,9 +29,10 @@ async function* walk(dir) {
 }
 
 /**
- * @param {string} srcBase
- * @param {string} destBase
+ * @param {string} srcBase - base path of target.src
+ * @param {string} destBase - base path of target.dest
  * @param {CopyTarget[]} targets
+ * @returns {AsyncGenerator<TargetEntry>}
  */
 export async function* collect(srcBase, destBase, targets) {
   for (let target of targets) {
