@@ -19,7 +19,7 @@ import { collect } from "./build.js";
  * @param {RollupPluginSimpleCopyOptions} options
  * @returns {Plugin}
  */
-export function copy(options) {
+export default function copy(options) {
   const { targets } = options;
 
   return {

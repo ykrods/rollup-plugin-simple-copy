@@ -76,6 +76,6 @@ export function buildPlugin(options) {
  * @param {VitePluginSimpleCopyOptions} options
  * @return {Plugin[]}
  */
-export function copy(options) {
+export default function copy(options) {
   return [servePlugin(options), buildPlugin(options)]
 }
