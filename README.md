@@ -21,7 +21,7 @@ export default {
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite';
-import { copy } from "rollup-plugin-simple-copy/vite";
+import copy from "rollup-plugin-simple-copy/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
